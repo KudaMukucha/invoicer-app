@@ -66,7 +66,7 @@ export default function Features() {
                     <p className='mb-3 text-xl'>
                     {feature.title}
                     </p>
-                    <p className='text-sm text-slate-300'>
+                    <p className='text-[13.5px] text-slate-300'>
                     {feature.description} 
                     </p>
                 </div>

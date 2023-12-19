@@ -19,7 +19,7 @@ export default function Pricing() {
                     <PiSealCheck className="backdrop:text-purple-500 text-3xl"/>
                 </div>
                 <h4 className="font-bold text-slate-900 text-xl">Free Plan</h4>
-                <p className="text-slate-600 text-sm">
+                <p className="text-slate-600 text-[14x]">
                     Create up to 50 invoices in a year - completely free. No hidden charges.
                 </p>
                 <Link href={'/invoice/new'} className={'text-blue-500 hover:text-blue-700 font-semibold'}>
@@ -33,7 +33,7 @@ export default function Pricing() {
                     <IoDiamondSharp className="backdrop:text-purple-500 text-3xl"/>
                 </div>
                 <h4 className="font-bold text-slate-900 text-xl">Premium Plan</h4>
-                <p className="text-slate-600 text-sm">
+                <p className="text-slate-600 text-[14x]">
                     Manage your invoices at a faster pace at a minimal cost.
                 </p>
                 <Link href={'/premium/'} className={'text-blue-500 hover:text-blue-700 font-semibold'}>

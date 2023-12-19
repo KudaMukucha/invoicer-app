@@ -10,14 +10,14 @@ export default function Steps() {
         <p className="border border-rose-200 rounded-full p-2 h-8 w-8 flex items-center justify-center bg-slate-100 text-sm">
             1
         </p>
-        <p className="text-sm">Invoice Details</p>
+        <p className="text-[14x]">Invoice Details</p>
         <MdArrowForwardIos className="hidden md:block" />
         </div>
         <div className="flex items-center gap-3 mb-4 md:mb-0">
         <p className="border border-rose-200 rounded-full p-2 h-8 w-8 flex items-center justify-center bg-slate-100 text-sm">
             2
         </p>
-        <p className="text-sm">Your Bank Details</p>
+        <p className="text-[14x]">Your Bank Details</p>
         <MdArrowForwardIos className="hidden md:block" />
         </div>
         
@@ -25,7 +25,7 @@ export default function Steps() {
         <p className="border border-rose-200 rounded-full p-2 h-8 w-8 flex items-center justify-center bg-slate-100 text-sm">
             3
         </p>
-        <p className="text-sm">Select design and colors <br /> (Download or Email Your Invoice)</p>
+        <p className="text-[14x]">Select design and colors <br /> (Download or Email Your Invoice)</p>
         </div>
         </div>
        </div>

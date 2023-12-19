@@ -8,12 +8,12 @@ export default function Navbar() {
         <Link href={'/'} className={'text-xl font-semibold'}>
         Invoicer
         </Link>
-        <nav className='flex items-center gap-3 text-sm'>
+        <nav className='flex items-center gap-3 text-[14x]'>
           <Link href={'/'}>Features</Link>
           <Link href={'/'}>Pricing</Link>
           <Link href={'/'}>Quick Guide</Link>
         </nav>
-        <div className='flex items-center text-sm gap-4'>
+        <div className='flex items-center text-[14x] gap-4'>
         <Link href={'/login'}>Login</Link>
           <ThemeLinkButton href={'/register'} title={'Register'} className={'bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300'}/>
         </div>
