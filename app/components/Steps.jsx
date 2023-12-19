@@ -2,7 +2,7 @@ import { MdArrowForwardIos } from "react-icons/md";
 
 export default function Steps() {
   return (
-    <div className="py-8 md:py-16 px-4  md:px-16 bg-slate-50 mx-auto flex items-center justify-center">
+    <div className="py-8 md:py-16 px-4  md:px-16 bg-slate-50 mx-auto flex items-center justify-center font-sans">
        <div>
        <h2 className="text-2xl md:text-3xl font-semibold mb-4">Create Your First Invoice In Less Than 2 Minutes.</h2>
         <div className="flex flex-col md:flex-row items-start md:items-center gap-0 md:gap-5">

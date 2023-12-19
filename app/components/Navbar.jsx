@@ -4,7 +4,7 @@ import ThemeLinkButton from './ThemeLinkButton'
 
 export default function Navbar() {
   return (
-    <header className='bg-violet-700 fixed right-0 left-0 top-0 w-full h-16 flex items-center justify-between px-16 text-slate-50'>
+    <header className='bg-violet-700 fixed right-0 left-0 top-0 w-full h-16 flex items-center justify-between px-16 text-slate-50 font-sans'>
         <Link href={'/'} className={'text-xl font-semibold'}>
         Invoicer
         </Link>
