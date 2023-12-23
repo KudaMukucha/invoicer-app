@@ -30,6 +30,7 @@ export default function CreateInvoice() {
   });
 
   const [tableData, setTableData] = useState([]);
+  const [combinedData,setCombinedData] = useState({})
   // console.log(formData);
   function handleInputChange(e) {
     const { name, value } = e.target;
@@ -44,13 +45,18 @@ export default function CreateInvoice() {
   function handleFormSubmit(e) {
     e.preventDefault();
     //  console.log(formData);
-    const combinedData = {
+    const allFormData = {
       ...formData,
+      logoUrl,
       tableData,
     };
-    console.log(combinedData);
+    setCombinedData(allFormData)
+    console.log(allFormData);
     setPreview(!preview);
   }
+
+  console.log(combinedData);
+
   function updateTableData(newTableData) {
     setTableData(newTableData);
   }
@@ -98,7 +104,7 @@ export default function CreateInvoice() {
       </div>
       {/* Invoice Form */}
       {preview ? (
-        <FormPreview data={formData} />
+        <FormPreview data={combinedData} />
       ) : (
         <form
           onSubmit={handleFormSubmit}
@@ -109,34 +115,37 @@ export default function CreateInvoice() {
             {/* Image Upload */}
 
             <div className="flex items-center justify-center">
-        {logoUrl ? (  <CldImage
-        width={'240'}
-        height={'240'}
-        src={logoUrl}
-        alt="Invoice Logo"
-        />)
-                :
-                (   <label
-            htmlFor="dropzone-file"
-            className="flex flex-col items-center justify-center w-48 h-24 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 hover:bg-gray-100"
-            >
-            <div className="flex flex-col items-center justify-center pt-5 pb-6">
-                <AiOutlineCloudUpload className="w-6 h-6 text-gray-500" />
-                <p className="mb-2 text-sm text-gray-500 dark:text-gray-400">
-                <CldUploadButton onUpload={(data)=>{
-    console.log(data.info.secure_url)
-    setLogoUrl(data.info.secure_url)
-    }}
-    uploadPreset="InvoicePreset"
-    className=""
-    />
-                </p>
-                <p className="text-xs text-gray-500 dark:text-gray-400">
-                PNG or JPG(MAX. 240x240px)
-                </p>
-            </div>
-            {/* <input id="dropzone-file" type="file" className="hidden" /> */}
-            </label>)}
+              {logoUrl ? (
+                <CldImage
+                  width={"240"}
+                  height={"240"}
+                  src={logoUrl}
+                  alt="Invoice Logo"
+                />
+              ) : (
+                <label
+                  htmlFor="dropzone-file"
+                  className="flex flex-col items-center justify-center w-48 h-24 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 hover:bg-gray-100"
+                >
+                  <div className="flex flex-col items-center justify-center pt-5 pb-6">
+                    <AiOutlineCloudUpload className="w-6 h-6 text-gray-500" />
+                    <p className="mb-2 text-sm text-gray-500 dark:text-gray-400">
+                      <CldUploadButton
+                        onUpload={(data) => {
+                          console.log(data.info.secure_url);
+                          setLogoUrl(data.info.secure_url);
+                        }}
+                        uploadPreset="InvoicePreset"
+                        className=""
+                      />
+                    </p>
+                    <p className="text-xs text-gray-500 dark:text-gray-400">
+                      PNG or JPG(MAX. 240x240px)
+                    </p>
+                  </div>
+                  {/* <input id="dropzone-file" type="file" className="hidden" /> */}
+                </label>
+              )}
             </div>
 
             <h2 className="text-4xl uppercase font-semibold">Invoice</h2>
